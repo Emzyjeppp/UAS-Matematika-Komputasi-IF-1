@@ -215,6 +215,55 @@ tr:nth-child(even) { background-color: #f1f5f9; }
     table { font-size: 8.2px; }
     th, td { padding: 2px 4px; }
 }
+
+@media (max-width: 768px) {
+    html, body {
+        height: auto;
+        overflow-y: auto;
+    }
+    .stage {
+        padding: 16px 8px 40px;
+    }
+    .flip-container {
+        aspect-ratio: auto;
+        height: auto;
+        perspective: none;
+    }
+    .flip-card {
+        transform-style: flat;
+        height: auto;
+        transition: none;
+    }
+    .face {
+        position: relative !important;
+        inset: auto !important;
+        height: auto !important;
+        overflow-y: visible !important;
+        box-shadow: 0 4px 12px rgba(15,23,42,0.08) !important;
+        border-radius: 8px !important;
+        padding: 20px 16px 30px !important;
+        display: none !important;
+        backface-visibility: visible !important;
+    }
+    .face.front {
+        display: block !important;
+    }
+    /* When flipped on mobile, show back and hide front */
+    .flip-card.flipped {
+        transform: none !important;
+    }
+    .flip-card.flipped .face.front {
+        display: none !important;
+    }
+    .flip-card.flipped .face.back {
+        display: block !important;
+        transform: none !important;
+    }
+    .corner-flip {
+        display: none !important;
+    }
+}
+
 </style>
 </head>
 <body>
