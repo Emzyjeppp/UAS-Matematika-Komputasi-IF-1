@@ -1,430 +1,436 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Resume UAS Matematika Komputasi IF-1 Genap 2026</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
-        
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        
-        body {
-            font-family: 'Outfit', sans-serif;
-            color: #1e293b;
-            background-color: #f8fafc;
-            line-height: 1.4;
-            font-size: 11px;
-            padding: 10px;
-        }
+<meta charset="UTF-8">
+<title>Resume UAS Matematika Komputasi IF-1 Genap 2026</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-        .header-full {
-            grid-column: 1 / -1;
-            text-align: center;
-            border-bottom: 3px double #3b82f6;
-            padding-bottom: 10px;
-            margin-bottom: 10px;
-        }
+html, body {
+    height: 100%;
+    font-family: 'Outfit', sans-serif;
+    color: #1e293b;
+    background: radial-gradient(circle at 50% 0%, #eef1f5 0%, #d7dce3 100%);
+}
 
-        .header-full h1 {
-            font-size: 22px;
-            font-weight: 700;
-            color: #1e3a8a;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+.stage {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 32px 14px 60px;
+    gap: 16px;
+}
 
-        .header-full p {
-            font-size: 12px;
-            color: #64748b;
-            font-weight: 600;
-            margin-top: 4px;
-        }
+.stage-title { text-align: center; margin-bottom: 4px; }
+.stage-title h1 { font-size: 20px; color: #1e3a8a; letter-spacing: 0.5px; }
+.stage-title p { font-size: 12px; color: #64748b; margin-top: 3px; font-weight: 500; }
 
-        h2 {
-            font-size: 14px;
-            color: #1e3a8a;
-            border-bottom: 2px solid #3b82f6;
-            padding-bottom: 3px;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            display: flex;
-            align-items: center;
-            font-weight: 700;
-        }
+.hint {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    user-select: none;
+}
+.hint svg { width: 14px; height: 14px; animation: point 1.4s ease-in-out infinite; }
+@keyframes point { 0%,100%{transform:translateX(0);} 50%{transform:translateX(5px);} }
 
-        h3 {
-            font-size: 11.5px;
-            color: #2563eb;
-            margin: 6px 0 4px 0;
-            font-weight: 600;
-        }
+/* ---------------- Flip card ---------------- */
+.flip-container {
+    width: min(94vw, 800px);
+    aspect-ratio: 210 / 297;
+    perspective: 2600px;
+    position: relative;
+}
 
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
+.flip-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s cubic-bezier(.6,.05,.28,.98);
+    cursor: pointer;
+}
 
-        li {
-            margin-bottom: 3px;
-            position: relative;
-            padding-left: 10px;
-        }
+.flip-card.flipped { transform: rotateY(180deg); }
 
-        li::before {
-            content: "•";
-            color: #3b82f6;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
+.face {
+    position: absolute;
+    inset: 0;
+    background: #ffffff;
+    border-radius: 3px;
+    box-shadow:
+        0 1px 2px rgba(15,23,42,0.06),
+        0 18px 45px rgba(15,23,42,0.22),
+        0 4px 10px rgba(15,23,42,0.10);
+    backface-visibility: hidden;
+    overflow-y: auto;
+    padding: 26px 28px 34px;
+    font-size: 13px;
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 transparent;
+    transition: box-shadow 0.3s ease;
+}
+.face::-webkit-scrollbar { width: 7px; }
+.face::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
 
-        .section-box {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 10px;
-            margin-bottom: 12px;
-        }
+.flip-container:hover .face {
+    box-shadow:
+        0 1px 2px rgba(15,23,42,0.06),
+        0 26px 55px rgba(15,23,42,0.28),
+        0 6px 14px rgba(15,23,42,0.12);
+}
 
-        .highlight-box {
-            background: #eff6ff;
-            border-left: 4px solid #3b82f6;
-            padding: 6px 8px;
-            margin: 4px 0;
-            border-radius: 0 6px 6px 0;
-        }
+.face.back { transform: rotateY(180deg); }
 
-        .formula-box {
-            font-family: 'JetBrains Mono', monospace;
-            background: #0f172a;
-            color: #38bdf8;
-            padding: 6px 10px;
-            border-radius: 6px;
-            margin: 6px 0;
-            font-size: 10px;
-            text-align: center;
-            font-weight: 500;
-        }
+.face::before {
+    content: "";
+    position: absolute;
+    top: 0; right: 0;
+    width: 26px; height: 26px;
+    background: linear-gradient(135deg, transparent 50%, #e2e8f0 50%);
+    pointer-events: none;
+}
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 6px 0;
-            font-size: 10px;
-        }
+.corner-flip {
+    position: absolute;
+    bottom: 10px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9.5px;
+    color: #94a3b8;
+    pointer-events: none;
+}
+.corner-flip svg { width: 12px; height: 12px; }
 
-        th, td {
-            border: 1px solid #cbd5e1;
-            padding: 4px 6px;
-            text-align: left;
-        }
+/* ---------------- Content typography ---------------- */
+.header-full { text-align: center; border-bottom: 3px double #3b82f6; padding-bottom: 10px; margin-bottom: 14px; }
+.header-full h1 { font-size: 19px; font-weight: 700; color: #1e3a8a; text-transform: uppercase; letter-spacing: 0.5px; }
+.header-full p { font-size: 11px; color: #64748b; font-weight: 600; margin-top: 4px; }
 
-        th {
-            background-color: #3b82f6;
-            color: white;
-            font-weight: 600;
-        }
+.header-mini {
+    display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 1.5px solid #94a3b8; padding-bottom: 7px; margin-bottom: 14px;
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #64748b;
+    text-transform: uppercase; letter-spacing: 0.5px;
+}
 
-        tr:nth-child(even) {
-            background-color: #f1f5f9;
-        }
+h2 {
+    font-size: 15px; color: #1e3a8a; border-bottom: 2px solid #3b82f6;
+    padding-bottom: 4px; margin-bottom: 8px; text-transform: uppercase; font-weight: 700;
+}
+h3 { font-size: 13px; color: #2563eb; margin: 10px 0 5px 0; font-weight: 600; }
+p { margin-bottom: 5px; }
+ul, ol { padding-left: 16px; margin-bottom: 6px; }
+ul { list-style-type: none; padding-left: 0; }
+li { margin-bottom: 4px; position: relative; padding-left: 13px; }
+li::before { content: "•"; color: #3b82f6; font-weight: bold; position: absolute; left: 0; }
 
-        .math-symbol {
-            font-family: 'JetBrains Mono', monospace;
-            font-weight: bold;
-            color: #b91c1c;
-        }
+.section-box {
+    background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px;
+    padding: 14px 16px; margin-bottom: 16px;
+}
 
-        /* Print Optimization */
-        @media print {
-            body {
-                background: white;
-                color: black;
-                font-size: 9.5px;
-                padding: 0;
-            }
-            .container {
-                box-shadow: none;
-                padding: 0;
-                gap: 15px;
-                grid-template-columns: 1fr 1fr;
-            }
-            .section-box {
-                page-break-inside: avoid;
-                margin-bottom: 8px;
-                padding: 6px;
-            }
-            h2 {
-                font-size: 12px;
-                margin-bottom: 5px;
-            }
-            h3 {
-                font-size: 10px;
-                margin: 4px 0 2px 0;
-            }
-            .formula-box {
-                font-size: 9px;
-                padding: 4px;
-            }
-            table {
-                font-size: 9px;
-            }
-            th, td {
-                padding: 2px 4px;
-            }
-        }
-    </style>
+.highlight-box {
+    background: #eff6ff; border-left: 4px solid #3b82f6; padding: 7px 10px;
+    margin: 6px 0; border-radius: 0 8px 8px 0;
+}
+
+.formula-box {
+    font-family: 'JetBrains Mono', monospace; background: #0f172a; color: #38bdf8;
+    padding: 8px 12px; border-radius: 7px; margin: 7px 0; font-size: 12px;
+    text-align: center; font-weight: 500;
+}
+
+table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 11.5px; }
+th, td { border: 1px solid #cbd5e1; padding: 5px 7px; text-align: left; }
+th { background-color: #3b82f6; color: white; font-weight: 600; }
+tr:nth-child(even) { background-color: #f1f5f9; }
+
+.math-symbol { font-family: 'JetBrains Mono', monospace; font-weight: bold; color: #b91c1c; }
+
+/* ---------------- Nav / dots ---------------- */
+.nav { display: flex; align-items: center; gap: 16px; margin-top: 4px; }
+.nav button {
+    font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 13px;
+    background: #1e3a8a; color: white; border: none; border-radius: 999px;
+    padding: 9px 20px; cursor: pointer; display: flex; align-items: center; gap: 7px;
+    box-shadow: 0 4px 14px rgba(30,58,138,0.3); transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.nav button:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(30,58,138,0.4); }
+.nav button:active { transform: translateY(0); }
+.nav button svg { width: 15px; height: 15px; transition: transform 0.4s ease; }
+.nav button.is-flipped svg { transform: rotate(180deg); }
+
+.dots { display: flex; gap: 7px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: #cbd5e1; transition: background 0.3s ease, transform 0.3s ease; }
+.dot.active { background: #3b82f6; transform: scale(1.25); }
+
+.print-btn { background: transparent; color: #475569; border: 1px solid #cbd5e1; box-shadow: none; font-size: 12px; padding: 8px 16px; }
+.print-btn:hover { background: #f1f5f9; box-shadow: none; }
+
+@media (max-width: 480px) {
+    .face { padding: 18px 16px 26px; font-size: 11.5px; }
+    h2 { font-size: 13px; } h3 { font-size: 11.5px; }
+}
+
+/* ---------------- PRINT: exact A4, compact, 2 real pages ---------------- */
+@media print {
+    @page { size: A4; margin: 0; }
+    body { background: #fff; }
+    .stage-title, .hint, .nav { display: none !important; }
+    .stage { padding: 0; gap: 0; min-height: 0; }
+    .flip-container { width: 210mm; aspect-ratio: auto; perspective: none; }
+    .flip-card { transform: none !important; height: auto; }
+    .face {
+        position: static !important;
+        transform: none !important;
+        backface-visibility: visible;
+        box-shadow: none;
+        border-radius: 0;
+        width: 210mm;
+        height: 297mm;
+        overflow: hidden;
+        padding: 12mm 11mm;
+        font-size: 9.4px;
+        page-break-after: always;
+    }
+    .face.back { page-break-after: auto; }
+    .face::before, .corner-flip { display: none; }
+    .content-columns { column-count: 2; column-gap: 6mm; column-rule: 1px solid #e2e8f0; }
+    h2 { font-size: 12px; margin-bottom: 6px; }
+    h3 { font-size: 10px; margin: 5px 0 3px; }
+    .section-box { padding: 7px 8px; margin-bottom: 8px; break-inside: avoid; }
+    .highlight-box, .formula-box, table, li { break-inside: avoid; }
+    .formula-box { font-size: 8.6px; padding: 4px 7px; }
+    table { font-size: 8.2px; }
+    th, td { padding: 2px 4px; }
+}
+</style>
 </head>
 <body>
 
-<div class="container">
-    <div class="header-full">
+<div class="stage">
+    <div class="stage-title">
         <h1>Resume UAS Matematika Komputasi (IF-1)</h1>
-        <p>Close Book Ujian (Open 1 Lembar Resume A4 Bolak-Balik) | Genap 2026 | Ilham Rais Arvianto</p>
+        <p>Close Book Ujian &middot; Open 1 Lembar Resume A4 Bolak-Balik &middot; Genap 2026 &middot; Ilham Rais Arvianto</p>
     </div>
 
-    <!-- KOLOM KIRI -->
-    <div>
-        <!-- SEKSI 1: GRAF EULER -->
-        <div class="section-box">
-            <h2>1. Graf Euler & Hamilton</h2>
-            
-            <h3>A. Definisi Dasar</h3>
-            <ul>
-                <li><strong>Lintasan Euler:</strong> Melewati setiap <strong>sisi (edge)</strong> graf tepat 1 kali.</li>
-                <li><strong>Sirkuit Euler:</strong> Lintasan tertutup melewati setiap <strong>sisi</strong> tepat 1 kali.</li>
-                <li><strong>Graf Euler:</strong> Memiliki sirkuit Euler. <strong>Graf Semi-Euler:</strong> Memiliki lintasan Euler saja.</li>
-            </ul>
+    <div class="hint">
+        <span>Klik lembar atau tombol untuk membalik ke sisi lain</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </div>
 
-            <h3>B. Teorema Graf Tidak Berarah (Undirected)</h3>
-            <div class="highlight-box">
-                <strong>Sirkuit Euler (Graf Euler):</strong> Graf terhubung &amp; <strong>setiap simpul berderajat genap</strong>.
+    <div class="flip-container" id="flipContainer">
+        <div class="flip-card" id="flipCard">
+
+            <!-- SISI 1 -->
+            <div class="face front">
+                <div class="header-full">
+                    <h1>Resume UAS Matematika Komputasi (IF-1)</h1>
+                    <p>Close Book Ujian (Open 1 Lembar Resume A4 Bolak-Balik) | Genap 2026 | Ilham Rais Arvianto</p>
+                </div>
+
+                <div class="content-columns">
+                    <div class="section-box">
+                        <h2>1. Graf Euler &amp; Hamilton</h2>
+                        <h3>A. Definisi Dasar</h3>
+                        <ul>
+                            <li><strong>Lintasan Euler:</strong> Melewati setiap <strong>sisi (edge)</strong> graf tepat 1 kali.</li>
+                            <li><strong>Sirkuit Euler:</strong> Lintasan tertutup melewati setiap <strong>sisi</strong> tepat 1 kali.</li>
+                            <li><strong>Graf Euler:</strong> Memiliki sirkuit Euler. <strong>Graf Semi-Euler:</strong> Memiliki lintasan Euler saja.</li>
+                        </ul>
+
+                        <h3>B. Teorema Graf Tidak Berarah (Undirected)</h3>
+                        <div class="highlight-box"><strong>Sirkuit Euler (Graf Euler):</strong> Graf terhubung &amp; <strong>setiap simpul berderajat genap</strong>.</div>
+                        <div class="highlight-box"><strong>Lintasan Euler (Graf Semi-Euler):</strong> Graf terhubung &amp; <strong>tepat memiliki 2 simpul berderajat ganjil</strong> (atau tidak ada simpul ganjil sama sekali).</div>
+
+                        <h3>C. Teorema Graf Berarah (Digraph)</h3>
+                        <ul>
+                            <li><strong>Sirkuit Euler:</strong> Terhubung lemah &amp; derajat-masuk = derajat-keluar (<span class="math-symbol">d_in(v) = d_out(v)</span>) untuk semua simpul.</li>
+                            <li><strong>Lintasan Euler:</strong> Terhubung lemah &amp; <span class="math-symbol">d_in = d_out</span> untuk semua simpul kecuali dua:
+                                <br>&bull; Simpul awal: <span class="math-symbol">d_out(u) = d_in(u) + 1</span>
+                                <br>&bull; Simpul akhir: <span class="math-symbol">d_in(w) = d_out(w) + 1</span>
+                            </li>
+                        </ul>
+
+                        <h3>D. Rumus &amp; Ketidaksamaan Euler (Planar)</h3>
+                        <p>Untuk graf planar terhubung dengan simpul (<span class="math-symbol">n</span>), sisi (<span class="math-symbol">e</span>), dan wilayah (<span class="math-symbol">f</span>):</p>
+                        <div class="formula-box">Rumus Euler: n - e + f = 2 &nbsp;|&nbsp; f = e - n + 2</div>
+                        <p><strong>Lemma Jabat Tangan:</strong> <span class="math-symbol">&Sigma; d(v) = 2e &rArr; e = &Sigma; d(v) / 2</span></p>
+                        <p><strong>Ketidaksamaan Euler:</strong></p>
+                        <ul>
+                            <li><strong>Umum</strong> (ada sirkuit panjang 3/segitiga): <span class="math-symbol">e &le; 3n - 6</span> (n &ge; 3)</li>
+                            <li><strong>Khusus</strong> (bebas segitiga, mis. bipartit K3,3): <span class="math-symbol">e &le; 2n - 4</span> (n &ge; 3)</li>
+                        </ul>
+                        <div class="highlight-box"><strong>Kuratowski:</strong> Graf planar &hArr; tidak memuat subgraf homeomorfik dengan K5 atau K3,3.</div>
+                    </div>
+
+                    <div class="section-box">
+                        <h2>2. Shortest Path &amp; TSP</h2>
+                        <h3>A. Algoritma Dijkstra (Jarak Terpendek)</h3>
+                        <p>Mencari jarak terpendek dari simpul asal (<span class="math-symbol">s</span>) ke semua simpul pada graf berbobot positif.</p>
+                        <p><strong>Langkah Kerja (Metode Tabel):</strong></p>
+                        <ol>
+                            <li>Inisialisasi: <span class="math-symbol">d[s]=0</span>, lainnya <span class="math-symbol">d[v]=&infin;</span>. Set <span class="math-symbol">S=&empty;</span>.</li>
+                            <li>Pilih <span class="math-symbol">u&notin;S</span> dengan <span class="math-symbol">d[u]</span> terkecil. Masukkan <span class="math-symbol">u</span> ke <span class="math-symbol">S</span>.</li>
+                            <li>Relaxing tetangga <span class="math-symbol">v&notin;S</span> dari <span class="math-symbol">u</span>: jika <span class="math-symbol">d[u]+W(u,v)&lt;d[v]</span>, perbarui <span class="math-symbol">d[v]=d[u]+W(u,v)</span>, <span class="math-symbol">p[v]=u</span>.</li>
+                            <li>Ulangi sampai semua simpul masuk ke <span class="math-symbol">S</span>.</li>
+                        </ol>
+
+                        <p><strong>Contoh Tabel Dijkstra (Asal: A):</strong></p>
+                        <table>
+                            <thead><tr><th>It.</th><th>u</th><th>S</th><th>d[B],p[B]</th><th>d[C],p[C]</th><th>d[D],p[D]</th></tr></thead>
+                            <tbody>
+                                <tr><td>Inisial</td><td>-</td><td>&empty;</td><td>&infin;,-</td><td>&infin;,-</td><td>&infin;,-</td></tr>
+                                <tr><td>1</td><td>A</td><td>{A}</td><td>4,A</td><td>2,A</td><td>&infin;,-</td></tr>
+                                <tr><td>2</td><td>C</td><td>{A,C}</td><td><strong>3,C</strong> (2+1)</td><td>2,A</td><td>7,C (2+5)</td></tr>
+                                <tr><td>3</td><td>B</td><td>{A,C,B}</td><td>3,C</td><td>2,A</td><td><strong>6,B</strong> (3+3)</td></tr>
+                                <tr><td>4</td><td>D</td><td>{A,C,B,D}</td><td>3,C</td><td>2,A</td><td>6,B</td></tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Lintasan Terpendek ke D:</strong> A &rarr; C &rarr; B &rarr; D (Bobot = 6)</p>
+
+                        <h3>B. TSP vs. CPP</h3>
+                        <ul>
+                            <li><strong>TSP:</strong> Mengunjungi setiap <strong>simpul</strong> tepat 1x &amp; kembali ke asal &rArr; <strong>Sirkuit Hamilton</strong> bobot minimum.</li>
+                            <li><strong>CPP:</strong> Melewati setiap <strong>sisi</strong> min. 1x &amp; kembali ke asal &rArr; jika graf Euler, bobot = total bobot sisi; jika tidak, duplikat sisi minimal penghubung simpul ganjil.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="corner-flip">
+                    <span>Sisi 1</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+                </div>
             </div>
-            <div class="highlight-box">
-                <strong>Lintasan Euler (Graf Semi-Euler):</strong> Graf terhubung &amp; <strong>tepat memiliki 2 simpul berderajat ganjil</strong> (atau tidak ada simpul ganjil sama sekali).
+
+            <!-- SISI 2 -->
+            <div class="face back">
+                <div class="header-mini">
+                    <span>Resume UAS Matek Komputasi &middot; IF-1</span>
+                    <span>Genap 2026 &middot; Ilham Rais Arvianto</span>
+                </div>
+
+                <div class="content-columns">
+                    <div class="section-box">
+                        <h2>3. Minimum Spanning Tree (MST)</h2>
+                        <p>Pohon rentang dari graf dengan simpul (<span class="math-symbol">n</span>) memiliki tepat <span class="math-symbol">n-1</span> sisi tanpa sirkuit. MST = pohon rentang bobot total minimal.</p>
+
+                        <h3>A. Algoritma Prim (Vertex-based)</h3>
+                        <ol>
+                            <li>Pilih simpul acak/ditentukan, masukkan ke pohon T.</li>
+                            <li>Cari sisi berbobot minimum yang menghubungkan simpul di T dengan simpul di luar T, tanpa membentuk sirkuit.</li>
+                            <li>Masukkan sisi &amp; simpul baru tersebut ke T.</li>
+                            <li>Ulangi langkah 2-3 sebanyak <span class="math-symbol">n-2</span> kali (sampai <span class="math-symbol">n-1</span> sisi).</li>
+                        </ol>
+
+                        <h3>B. Algoritma Kruskal (Edge-based)</h3>
+                        <ol>
+                            <li>Urutkan seluruh sisi graf berdasarkan bobot menaik.</li>
+                            <li>Pilih sisi terkecil berturut-turut, masukkan ke T asal tidak membentuk sirkuit.</li>
+                            <li>Ulangi sampai terkumpul tepat <span class="math-symbol">n-1</span> sisi.</li>
+                        </ol>
+
+                        <p><strong>Contoh:</strong> Graf sisi AB(1), BC(2), CD(3), AD(4), AC(5). n=4.</p>
+                        <ul>
+                            <li><strong>Kruskal:</strong> AB(1)&rarr;BC(2)&rarr;CD(3). Selesai (3 sisi). Bobot=6.</li>
+                            <li><strong>Prim (mulai A):</strong> Pilih AB(1)&rarr;T={A,B}. Pilih BC(2)&rarr;T={A,B,C}. Pilih CD(3)&rarr;T={A,B,C,D}. Bobot=6.</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-box">
+                        <h2>4. Pohon m-ary (Daun &amp; Simpul)</h2>
+                        <h3>A. Definisi &amp; Hubungan Simpul</h3>
+                        <p>Pohon berakar, setiap simpul dalam maksimal <span class="math-symbol">m</span> anak. <strong>Penuh (Full):</strong> setiap simpul dalam tepat <span class="math-symbol">m</span> anak.</p>
+                        <div class="formula-box">n = m&middot;i + 1 &nbsp;|&nbsp; n = l + i</div>
+                        <div class="formula-box">l = (m-1)i + 1 &nbsp;|&nbsp; l = ((m-1)n+1)/m</div>
+                        <div class="formula-box">i = (l-1)/(m-1) &nbsp;|&nbsp; i = (n-1)/m</div>
+                        <p>Pohon m-ary penuh teratur, tinggi <span class="math-symbol">h</span>:</p>
+                        <ul>
+                            <li>Daun maksimum: <span class="math-symbol">L = m^h</span></li>
+                            <li>Simpul maksimum: <span class="math-symbol">S = (m^(h+1)-1)/(m-1)</span></li>
+                        </ul>
+
+                        <h3>B. Pembahasan Soal Slide</h3>
+                        <p><strong>Latihan 1 (L &amp; S):</strong></p>
+                        <ul>
+                            <li>2-ary, h=3: <span class="math-symbol">L=2^3=8</span> | <span class="math-symbol">S=(2^4-1)/1=15</span></li>
+                            <li>3-ary, h=5: <span class="math-symbol">L=3^5=243</span> | <span class="math-symbol">S=(3^6-1)/2=364</span></li>
+                            <li>4-ary, h=4: <span class="math-symbol">L=4^4=256</span> | <span class="math-symbol">S=(4^5-1)/3=341</span></li>
+                        </ul>
+
+                        <p><strong>Latihan 2 (hapus anak 1 simpul aras 2):</strong></p>
+                        <ul>
+                            <li>2-ary (h=3): subtree tinggi 1 = 3 simpul. <span class="math-symbol">S_baru=15-2=13</span> | <span class="math-symbol">L_baru=8-2+1=7</span></li>
+                            <li>3-ary (h=5): subtree tinggi 3 = 40 simpul (39 dihapus). <span class="math-symbol">S_baru=364-39=325</span> | <span class="math-symbol">L_baru=243-27+1=217</span></li>
+                            <li>4-ary (h=4): subtree tinggi 2 = 21 simpul (20 dihapus). <span class="math-symbol">S_baru=341-20=321</span> | <span class="math-symbol">L_baru=256-16+1=241</span></li>
+                        </ul>
+
+                        <p><strong>Latihan 3 (Ternary m=3, N=131, cari k &amp; Daun):</strong></p>
+                        <ul>
+                            <li>k=4 &rarr; batas atas <span class="math-symbol">(3^5-1)/2=121 &lt; 131</span> &rArr; <strong>k=5</strong> (batas 122&ndash;364).</li>
+                            <li>Aras 0-4 penuh = 121 simpul. Sisa di aras 5 = <span class="math-symbol">131-121=10</span>.</li>
+                            <li>Parent di aras 4 berdaun di aras 5: <span class="math-symbol">&lceil;10/3&rceil;=4</span>.</li>
+                            <li>Daun di aras 4: <span class="math-symbol">3^4-4=77</span>. Total Daun = <span class="math-symbol">77+10=87</span>.</li>
+                            <li>Verifikasi: <span class="math-symbol">i=121-81+4=44</span>, <span class="math-symbol">N=44+87=131</span> &check;</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="corner-flip">
+                    <span>Sisi 2</span>
+                </div>
             </div>
 
-            <h3>C. Teorema Graf Berarah (Digraph)</h3>
-            <ul>
-                <li><strong>Sirkuit Euler:</strong> Terhubung lemah &amp; derajat-masuk = derajat-keluar (<span class="math-symbol">d_in(v) = d_out(v)</span>) untuk semua simpul.</li>
-                <li><strong>Lintasan Euler:</strong> Terhubung lemah &amp; <span class="math-symbol">d_in = d_out</span> untuk semua simpul kecuali dua:
-                    <br>• Simpul awal: <span class="math-symbol">d_out(u) = d_in(u) + 1</span>
-                    <br>• Simpul akhir: <span class="math-symbol">d_in(w) = d_out(w) + 1</span>
-                </li>
-            </ul>
-
-            <h3>D. Rumus &amp; Ketidaksamaan Euler (Planar)</h3>
-            <p>Untuk graf planar terhubung dengan simpul (<span class="math-symbol">n</span>), sisi (<span class="math-symbol">e</span>), dan wilayah (<span class="math-symbol">f</span>):</p>
-            <div class="formula-box">
-                Rumus Euler: n - e + f = 2  |  f = e - n + 2
-            </div>
-            <p><strong>Lemma Jabat Tangan:</strong> <span class="math-symbol">Σ d(v) = 2e ⟹ e = Σ d(v) / 2</span></p>
-            <p><strong>Ketidaksamaan Euler:</strong></p>
-            <ul>
-                <li><strong>Umum</strong> (ada sirkuit panjang 3/segitiga): <span class="math-symbol">e &le; 3n - 6</span> (untuk <span class="math-symbol">n &ge; 3</span>)</li>
-                <li><strong>Khusus</strong> (bebas segitiga, misal bipartit K3,3): <span class="math-symbol">e &le; 2n - 4</span> (untuk <span class="math-symbol">n &ge; 3</span>)</li>
-            </ul>
-            <div class="highlight-box">
-                <strong>Kuratowski:</strong> Graf planar ⟺ tidak memuat subgraf homeomorfik dengan K5 atau K3,3.
-            </div>
-        </div>
-
-        <!-- SEKSI 2: SHORTEST PATH -->
-        <div class="section-box">
-            <h2>2. Shortest Path &amp; TSP</h2>
-            <h3>A. Algoritma Dijkstra (Jarak Terpendek)</h3>
-            <p>Mencari jarak terpendek dari simpul asal (<span class="math-symbol">s</span>) ke semua simpul pada graf berbobot positif.</p>
-            <p><strong>Langkah Kerja (Metode Tabel):</strong></p>
-            <ol style="padding-left: 15px; margin-bottom: 5px;">
-                <li>Inisialisasi: <span class="math-symbol">d[s] = 0</span>, lainnya <span class="math-symbol">d[v] = &infin;</span>. Set <span class="math-symbol">S = &empty;</span>.</li>
-                <li>Pilih <span class="math-symbol">u &notin; S</span> dengan <span class="math-symbol">d[u]</span> terkecil. Masukkan <span class="math-symbol">u</span> ke <span class="math-symbol">S</span>.</li>
-                <li>Relaxing tetangga <span class="math-symbol">v &notin; S</span> dari <span class="math-symbol">u</span>:
-                    <br>Jika <span class="math-symbol">d[u] + W(u, v) &lt; d[v]</span>, maka perbarui <span class="math-symbol">d[v] = d[u] + W(u, v)</span> dan set parent <span class="math-symbol">p[v] = u</span>.
-                </li>
-                <li>Ulangi sampai semua simpul masuk ke <span class="math-symbol">S</span>.</li>
-            </ol>
-
-            <p><strong>Contoh Tabel Dijkstra (Asal: A):</strong></p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Iterasi</th>
-                        <th>u Terpilih</th>
-                        <th>S</th>
-                        <th>d[B], p[B]</th>
-                        <th>d[C], p[C]</th>
-                        <th>d[D], p[D]</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Inisial</td>
-                        <td>-</td>
-                        <td>&empty;</td>
-                        <td>&infin;, -</td>
-                        <td>&infin;, -</td>
-                        <td>&infin;, -</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>A</td>
-                        <td>{A}</td>
-                        <td>4, A</td>
-                        <td>2, A</td>
-                        <td>&infin;, -</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>C</td>
-                        <td>{A, C}</td>
-                        <td><strong>3, C</strong> (2+1)</td>
-                        <td>2, A</td>
-                        <td>7, C (2+5)</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>B</td>
-                        <td>{A, C, B}</td>
-                        <td>3, C</td>
-                        <td>2, A</td>
-                        <td><strong>6, B</strong> (3+3)</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>D</td>
-                        <td>{A, C, B, D}</td>
-                        <td>3, C</td>
-                        <td>2, A</td>
-                        <td>6, B</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p><strong>Lintasan Terpendek ke D:</strong> A &rarr; C &rarr; B &rarr; D (Bobot = 6)</p>
-
-            <h3>B. TSP vs. CPP</h3>
-            <ul>
-                <li><strong>Traveling Salesperson Problem (TSP):</strong> Mengunjungi setiap <strong>simpul</strong> tepat 1 kali &amp; kembali ke asal ⟹ <strong>Sirkuit Hamilton</strong> bobot minimum.</li>
-                <li><strong>Chinese Postman Problem (CPP):</strong> Melewati setiap <strong>sisi</strong> minimal 1 kali &amp; kembali ke asal ⟹ <strong>Sirkuit Euler</strong> terpendek.</li>
-            </ul>
         </div>
     </div>
 
-    <!-- KOLOM KANAN -->
-    <div>
-        <!-- SEKSI 3: MST -->
-        <div class="section-box">
-            <h2>3. Minimum Spanning Tree (MST)</h2>
-            <p>Pohon rentang dari graf dengan simpul (<span class="math-symbol">n</span>) memiliki tepat <span class="math-symbol">n - 1</span> sisi tanpa sirkuit. MST adalah pohon rentang dengan bobot total minimal.</p>
-            
-            <h3>A. Algoritma Prim (Simpul / Vertex-based)</h3>
-            <ol style="padding-left: 15px; margin-bottom: 5px;">
-                <li>Pilih simpul acak/ditentukan, masukkan ke pohon T.</li>
-                <li>Cari sisi berbobot minimum yang menghubungkan simpul di T dengan simpul di luar T, tanpa membentuk sirkuit.</li>
-                <li>Masukkan sisi &amp; simpul baru tersebut ke T.</li>
-                <li>Ulangi langkah 2-3 sebanyak <span class="math-symbol">n - 2</span> kali (sampai terkumpul <span class="math-symbol">n - 1</span> sisi).</li>
-            </ol>
-
-            <h3>B. Algoritma Kruskal (Sisi / Edge-based)</h3>
-            <ol style="padding-left: 15px; margin-bottom: 5px;">
-                <li>Urutkan seluruh sisi graf berdasarkan bobot secara menaik (kecil ke besar).</li>
-                <li>Pilih sisi berbobot terkecil berturut-turut, masukkan ke T asal tidak membentuk sirkuit.</li>
-                <li>Ulangi langkah 2 sampai terkumpul tepat <span class="math-symbol">n - 1</span> sisi.</li>
-            </ol>
-            
-            <p><strong>Contoh Kruskal &amp; Prim:</strong> Graf dengan sisi AB(1), BC(2), CD(3), AD(4), AC(5). n=4.</p>
-            <ul>
-                <li><strong>Kruskal:</strong> Pilih AB(1) &rarr; Pilih BC(2) &rarr; Pilih CD(3). (Selesai, 3 sisi). Bobot = 6.</li>
-                <li><strong>Prim (Mulai A):</strong> Hubungan A adalah AB(1), AD(4), AC(5).
-                    <br>&bull; Pilih AB(1). Pohon T={A, B}.
-                    <br>&bull; Hubungan T={A, B} ke luar: BC(2), AD(4), AC(5). Pilih BC(2). T={A, B, C}.
-                    <br>&bull; Hubungan T ke luar: CD(3), AD(4), AC(5). Pilih CD(3). T={A, B, C, D}. Bobot = 6.
-                </li>
-            </ul>
+    <div class="nav">
+        <button id="flipBtn" onclick="doFlip()">
+            <span id="flipLabel">Balik ke Sisi 2</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+        <div class="dots">
+            <div class="dot active" id="dot1"></div>
+            <div class="dot" id="dot2"></div>
         </div>
-
-        <!-- SEKSI 4: POHON M-ARY -->
-        <div class="section-box">
-            <h2>4. Pohon m-ary (Daun &amp; Simpul)</h2>
-            <h3>A. Definisi &amp; Hubungan Simpul</h3>
-            <p>Pohon berakar yang setiap simpul dalamnya memiliki maksimal <span class="math-symbol">m</span> anak. Pada pohon m-ary <strong>Penuh (Full)</strong>, setiap simpul dalam memiliki tepat <span class="math-symbol">m</span> anak.</p>
-            <p>Hubungan Simpul (<span class="math-symbol">n</span>), Daun (<span class="math-symbol">l</span>), dan Simpul Dalam (<span class="math-symbol">i</span>) pada pohon penuh:</p>
-            <div class="formula-box">
-                n = m·i + 1 &nbsp;|&nbsp; n = l + i
-            </div>
-            <div class="formula-box">
-                l = (m - 1)i + 1 &nbsp;|&nbsp; l = ((m - 1)n + 1) / m
-            </div>
-            <div class="formula-box">
-                i = (l - 1) / (m - 1) &nbsp;|&nbsp; i = (n - 1) / m
-            </div>
-            <p>Hubungan dengan Tinggi (<span class="math-symbol">h</span>) pada pohon m-ary penuh teratur:</p>
-            <ul>
-                <li>Jumlah daun maksimum: <span class="math-symbol">L = m^h</span></li>
-                <li>Jumlah simpul maksimum: <span class="math-symbol">S = (m^(h+1) - 1) / (m - 1)</span></li>
-            </ul>
-
-            <h3>B. Pembahasan Soal Slide</h3>
-            <p><strong>Latihan 1 (Mencari L &amp; S):</strong></p>
-            <ul>
-                <li>2-ary penuh teratur, h=3:
-                    <br><span class="math-symbol">L = 2^3 = 8</span> | <span class="math-symbol">S = (2^4 - 1)/1 = 15</span>
-                </li>
-                <li>3-ary penuh teratur, h=5:
-                    <br><span class="math-symbol">L = 3^5 = 243</span> | <span class="math-symbol">S = (3^6 - 1)/2 = 364</span>
-                </li>
-                <li>4-ary penuh teratur, h=4:
-                    <br><span class="math-symbol">L = 4^4 = 256</span> | <span class="math-symbol">S = (4^5 - 1)/3 = 341</span>
-                </li>
-            </ul>
-
-            <p><strong>Latihan 2 (Hapus anak dari 1 simpul di aras 2):</strong></p>
-            <p>Simpul di aras 2 memiliki subtree ber-tinggi <span class="math-symbol">h - 2</span> di bawahnya. Simpul di aras 2 tersebut dipertahankan (berubah status menjadi daun).</p>
-            <ul>
-                <li>2-ary (h=3): Subtree di aras 2 memiliki tinggi 1, berisi <span class="math-symbol">(2^2-1)/1 = 3</span> simpul (1 internal, 2 daun). Hapus anaknya (2 daun):
-                    <br><span class="math-symbol">S_baru = 15 - 2 = 13</span> | <span class="math-symbol">L_baru = 8 - 2 + 1 = 7</span>
-                </li>
-                <li>3-ary (h=5): Subtree di aras 2 memiliki tinggi 3, total simpul <span class="math-symbol">(3^4-1)/2 = 40</span> (13 internal, 27 daun). Hapus anaknya (39 simpul):
-                    <br><span class="math-symbol">S_baru = 364 - 39 = 325</span> | <span class="math-symbol">L_baru = 243 - 27 + 1 = 217</span>
-                </li>
-                <li>4-ary (h=4): Subtree di aras 2 memiliki tinggi 2, total simpul <span class="math-symbol">(4^3-1)/3 = 21</span> (5 internal, 16 daun). Hapus anaknya (20 simpul):
-                    <br><span class="math-symbol">S_baru = 341 - 20 = 321</span> | <span class="math-symbol">L_baru = 256 - 16 + 1 = 241</span>
-                </li>
-            </ul>
-
-            <p><strong>Latihan 3 (Pohon Ternary m=3, N=131 simpul. Cari k &amp; Daun):</strong></p>
-            <p>Pohon ternary lengkap (complete) dengan tinggi <span class="math-symbol">k</span>.</p>
-            <ul>
-                <li>Mencari tinggi k:
-                    <br>Batas atas simpul untuk k=4 adalah <span class="math-symbol">(3^5-1)/2 = 121</span>. Karena <span class="math-symbol">131 &gt; 121</span>, maka pohon harus memiliki tinggi <strong>k = 5</strong> (batas simpul 122 - 364).
-                </li>
-                <li>Menghitung Daun (L):
-                    <br>&bull; Jumlah simpul aras 0 s.d 4 (penuh) = <span class="math-symbol">121</span>.
-                    <br>&bull; Sisa simpul di aras 5 (daun terbawah) = <span class="math-symbol">131 - 121 = 10</span>.
-                    <br>&bull; Parent di aras 4 yang memiliki anak di aras 5 = <span class="math-symbol">&lceil;10 / 3&rceil; = 4</span> parent.
-                    <br>&bull; Daun di aras 4 (tidak memiliki anak) = <span class="math-symbol">3^4 - 4 = 77</span> daun.
-                    <br>&bull; Total Daun = <span class="math-symbol">77 + 10 = 87</span> daun.
-                    <br>&bull; (Internal nodes <span class="math-symbol">i = 121 - 81 + 4 = 44</span>. Verifikasi: <span class="math-symbol">N = 44 + 87 = 131</span> simpul. Cocok!)
-                </li>
-            </ul>
-        </div>
+        <button class="print-btn" onclick="window.print()">Cetak</button>
     </div>
 </div>
+
+<script>
+let flipped = false;
+const card = document.getElementById('flipCard');
+const container = document.getElementById('flipContainer');
+const btn = document.getElementById('flipBtn');
+const label = document.getElementById('flipLabel');
+const dot1 = document.getElementById('dot1');
+const dot2 = document.getElementById('dot2');
+
+function doFlip() {
+    flipped = !flipped;
+    card.classList.toggle('flipped', flipped);
+    btn.classList.toggle('is-flipped', flipped);
+    label.textContent = flipped ? 'Balik ke Sisi 1' : 'Balik ke Sisi 2';
+    dot1.classList.toggle('active', !flipped);
+    dot2.classList.toggle('active', flipped);
+}
+
+container.addEventListener('click', () => {
+    if (window.getSelection().toString().length > 0) return;
+    doFlip();
+});
+</script>
 
 </body>
 </html>
