@@ -2,6 +2,7 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
 <title>Resume UAS Matematika Komputasi IF-1 Genap 2026</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
@@ -218,8 +219,9 @@ tr:nth-child(even) { background-color: #f1f5f9; }
 
 @media (max-width: 768px) {
     html, body {
-        height: auto;
-        overflow-y: auto;
+        height: auto !important;
+        overflow-y: scroll !important;
+        -webkit-overflow-scrolling: touch !important;
     }
     .stage {
         padding: 16px 8px 40px;
